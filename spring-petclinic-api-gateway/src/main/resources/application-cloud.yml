@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      routes:
+        - id: vets-service
+          uri: https://vets-service.apps.internal
+          predicates:
+            - Path=/api/vet/**
+          filters:
+            - StripPrefix=2
+        - id: visits-service
+          uri: https://visits-service.apps.internal
+          predicates:
+            - Path=/api/visit/**
+          filters:
+            - StripPrefix=2
+        - id: customers-service
+          uri: https://customers-service.apps.internal
+          predicates:
+            - Path=/api/customer/**
+          filters:
+            - StripPrefix=2
