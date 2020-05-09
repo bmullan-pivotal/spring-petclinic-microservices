@@ -43,7 +43,6 @@ import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 /**
  * @author Maciej Szarlinski
  */
-@EnableDiscoveryClient
 @SpringBootApplication
 public class ApiGatewayApplication {
 

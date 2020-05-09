@@ -38,7 +38,7 @@
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
-        <!-- Third-party librairies -->
+        <!-- Third-party libraries -->
         <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
