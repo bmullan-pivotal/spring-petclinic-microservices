@@ -12,6 +12,11 @@ In this version, I also split the database to 3 separate mysql databases so that
 
 ## Compiling and pushing to Tanzu Application Service:
 
+- Rename `manifest-sample.yml` to `manifest.yml`. This version still requires to store the token in the manifest, so it is not included (see https://github.com/wavefrontHQ/wavefront-spring-boot/issues/51).
+- Edit `manifest.yml` and replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN` with your own specific API token from Wavefront. Also, replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI` with your Wavefront URL endpoint or Tanzu Application Service proxy endpoint. 
+- Note that if your operator deployed the Wavefront Proxy service for Tanzu Application Service, you can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file. Automatic binding is currently not supported.
+The code block below should create all required services, build and deploy all microservices.
+
 ```
 echo -n "Creating Required Services..."
 {
@@ -26,11 +31,7 @@ until [ `cf service config | grep -c "succeeded"` -ge 1  ] && [ `cf service regi
 do
   echo -n "."
 done
-```
 
-Once services have been created, continue. Edit `manifest.yml` and replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN` with your own specific API token from Wavefrot. Also, replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI` with your Wavefront URL endpoint or proxy. Note that if your operator deployed the Wavefront Proxy service to Cloud Foundry, you can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file.
-
-```
 mvn clean package
 cf push --no-start -f manifest-pcfone.yml
 
@@ -40,6 +41,11 @@ cf add-network-policy api-gateway --destination-app visits-service --protocol tc
 
 cf start vets-service & cf start visits-service & cf start customers-service & cf start api-gateway &
 ```
+
+Original readme is available below for reference
+-----
+
+
 
 ## Starting services locally without Docker
 
