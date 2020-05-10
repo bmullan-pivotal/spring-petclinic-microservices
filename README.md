@@ -6,7 +6,9 @@ This microservices branch was initially derived from [AngularJS version](https:/
 To achieve that goal we use Spring Cloud Gateway, Spring Cloud Circuit Breaker, Spring Cloud Config, Spring Cloud Sleuth, Resilience4j, Micrometer 
 and the Eureka Service Discovery from the [Spring Cloud Netflix](https://github.com/spring-cloud/spring-cloud-netflix) technology stack.
 
-#This fork is intended to demostrate the use of distributed tracing with Tanzu Observability by Wavefront, running on Tanzu Application Service
+# This fork is intended to demostrate the use of distributed tracing with Tanzu Observability by Wavefront, running on Tanzu Application Service.
+
+In this version, I also split the database to 3 separate mysql databases so that each microservice would have its own lifecycle.
 
 ## Compiling and pushing to Tanzu Application Service:
 
