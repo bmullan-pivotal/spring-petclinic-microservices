@@ -6,6 +6,39 @@ This microservices branch was initially derived from [AngularJS version](https:/
 To achieve that goal we use Spring Cloud Gateway, Spring Cloud Circuit Breaker, Spring Cloud Config, Spring Cloud Sleuth, Resilience4j, Micrometer 
 and the Eureka Service Discovery from the [Spring Cloud Netflix](https://github.com/spring-cloud/spring-cloud-netflix) technology stack.
 
+#This fork is intended to demostrate the use of distributed tracing with Tanzu Observability by Wavefront, running on Tanzu Application Service
+
+## Compiling and pushing to Tanzu Application Service:
+
+```
+echo -n "Creating Required Services..."
+{
+  cf create-service -c '{ "git": { "uri": "https://github.com/odedia/spring-petclinic-microservices-config.git", "periodic": true }, "count": 3 }' p.config-server standard config &
+  cf create-service p.service-registry standard registry & 
+  cf create-service p.mysql db-small customers-db &
+  cf create-service p.mysql db-small vets-db &
+  cf create-service p.mysql db-small visits-db &
+  sleep 5
+} &> /dev/null
+until [ `cf service config | grep -c "succeeded"` -ge 1  ] && [ `cf service registry | grep -c "succeeded"` -ge 1  ] && [ `cf service customers-db | grep -c "succeeded"` -ge 1  ] && [ `cf service vets-db | grep -c "succeeded"` -ge 1  ] && [ `cf service visits-db | grep -c "succeeded"` -ge 1  ]
+do
+  echo -n "."
+done
+```
+
+Once services have been created, continue. Edit `manifest.yml` and replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN` with your own specific API token from Wavefrot. Also, replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI` with your Wavefront URL endpoint or proxy. Note that if your operator deployed the Wavefront Proxy service to Cloud Foundry, you can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file.
+
+```
+mvn clean package
+cf push --no-start -f manifest-pcfone.yml
+
+cf add-network-policy api-gateway --destination-app vets-service --protocol tcp --port 8080
+cf add-network-policy api-gateway --destination-app customers-service --protocol tcp --port 8080
+cf add-network-policy api-gateway --destination-app visits-service --protocol tcp --port 8080
+
+cf start vets-service & cf start visits-service & cf start customers-service & cf start api-gateway &
+```
+
 ## Starting services locally without Docker
 
 Every microservice is a Spring Boot application and can be started locally using IDE or `../mvnw spring-boot:run` command. Please note that supporting services (Config and Discovery Server) must be started before any other application (Customers, Vets, Visits and API).

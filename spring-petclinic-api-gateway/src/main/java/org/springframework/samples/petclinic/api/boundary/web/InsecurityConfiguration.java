@@ -1,4 +1,5 @@
-package org.springframework.samples.petclinic.api.security;
+package org.springframework.samples.petclinic.api.boundary.web;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -10,9 +11,10 @@ public class InsecurityConfiguration {
     //@formatter:off
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-         http
-              .authorizeExchange()
-                   .anyExchange().permitAll();
-         return http.build();
+    	return http
+                .authorizeExchange().anyExchange().permitAll()
+                .and()
+                .csrf().disable()
+                .build();
     }
 }
