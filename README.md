@@ -6,16 +6,9 @@ This microservices branch was initially derived from [AngularJS version](https:/
 To achieve that goal we use Spring Cloud Gateway, Spring Cloud Circuit Breaker, Spring Cloud Config, Spring Cloud Sleuth, Resilience4j, Micrometer 
 and the Eureka Service Discovery from the [Spring Cloud Netflix](https://github.com/spring-cloud/spring-cloud-netflix) technology stack.
 
-# This fork is intended to demostrate the use of distributed tracing with Tanzu Observability by Wavefront, running on Tanzu Application Service.
-
-In this version, I also split the database to 3 separate mysql databases so that each microservice would have its own lifecycle.
+#This fork is intended to demostrate the use of distributed tracing with Tanzu Observability by Wavefront, running on Tanzu Application Service
 
 ## Compiling and pushing to Tanzu Application Service:
-
-- Rename `manifest-sample.yml` to `manifest.yml`. This version still requires to store the token in the manifest, so it is not included (see https://github.com/wavefrontHQ/wavefront-spring-boot/issues/51).
-- Edit `manifest.yml` and replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN` with your own specific API token from Wavefront. Also, replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI` with your Wavefront URL endpoint or Tanzu Application Service proxy endpoint. 
-- Note that if your operator deployed the Wavefront Proxy service for Tanzu Application Service, you can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file. Automatic binding is currently not supported.
-The code block below should create all required services, build and deploy all microservices.
 
 ```
 echo -n "Creating Required Services..."
@@ -31,9 +24,13 @@ until [ `cf service config | grep -c "succeeded"` -ge 1  ] && [ `cf service regi
 do
   echo -n "."
 done
+```
 
+Once services have been created, continue. Edit `manifest.yml` and replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN` with your own specific API token from Wavefrot. Also, replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI` with your Wavefront URL endpoint or proxy. Note that if your operator deployed the Wavefront Proxy service to Cloud Foundry, you can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file.
+
+```
 mvn clean package
-cf push --no-start -f manifest-pcfone.yml
+cf push --no-start
 
 cf add-network-policy api-gateway --destination-app vets-service --protocol tcp --port 8080
 cf add-network-policy api-gateway --destination-app customers-service --protocol tcp --port 8080
@@ -41,11 +38,6 @@ cf add-network-policy api-gateway --destination-app visits-service --protocol tc
 
 cf start vets-service & cf start visits-service & cf start customers-service & cf start api-gateway &
 ```
-
-Original readme is available below for reference
------
-
-
 
 ## Starting services locally without Docker
 

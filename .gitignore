@@ -16,6 +16,3 @@ target/
 
 # Branch switching
 generated/
-
-#Cloud Foundry
-manifest.yml
