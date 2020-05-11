@@ -10,6 +10,13 @@ and the Eureka Service Discovery from the [Spring Cloud Netflix](https://github.
 
 ## Compiling and pushing to Tanzu Application Service:
 
+Create a user-provided service for Wavefront:
+
+```
+cf cups -p '{"uri": "https://<endpoint>.wavefront.com", "api-token": "<your-token>", "application-name": "<your-application-name>"}' wavefront
+```
+If your operator deployed the wavefront proxy in your TAS environment, point the URI to the proxy instead. You can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file. 
+
 ```
 echo -n "Creating Required Services..."
 {
@@ -24,11 +31,7 @@ until [ `cf service config | grep -c "succeeded"` -ge 1  ] && [ `cf service regi
 do
   echo -n "."
 done
-```
 
-Once services have been created, continue. Edit `manifest.yml` and replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN` with your own specific API token from Wavefrot. Also, replace `MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI` with your Wavefront URL endpoint or proxy. Note that if your operator deployed the Wavefront Proxy service to Cloud Foundry, you can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file.
-
-```
 mvn clean package
 cf push --no-start
 
@@ -38,6 +41,11 @@ cf add-network-policy api-gateway --destination-app visits-service --protocol tc
 
 cf start vets-service & cf start visits-service & cf start customers-service & cf start api-gateway &
 ```
+
+
+## Original README below for reference.
+------
+
 
 ## Starting services locally without Docker
 
