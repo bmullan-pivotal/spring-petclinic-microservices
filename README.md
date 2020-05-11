@@ -17,6 +17,8 @@ cf cups -p '{"uri": "https://<endpoint>.wavefront.com", "api-token": "<your-toke
 ```
 If your operator deployed the wavefront proxy in your TAS environment, point the URI to the proxy instead. You can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file. 
 
+Contine with creating the services and deploying the application's microservices:
+
 ```
 echo -n "Creating Required Services..."
 {
