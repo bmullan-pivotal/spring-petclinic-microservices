@@ -160,23 +160,20 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/cloud/spring-cloud-starter-sleuth/2.2.0.RELEASE/spring-cloud-starter-sleuth-2.2.0.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/cloud/spring-cloud-sleuth-core/2.2.0.RELEASE/spring-cloud-sleuth-core-2.2.0.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/aspectj/aspectjrt/1.9.5/aspectjrt-1.9.5.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave/5.9.0/brave-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/zipkin2/zipkin/2.19.0/zipkin-2.19.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/reporter2/zipkin-reporter/2.11.0/zipkin-reporter-2.11.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-context-log4j2/5.9.0/brave-context-log4j2-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-messaging/5.9.0/brave-instrumentation-messaging-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-rpc/5.9.0/brave-instrumentation-rpc-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-spring-web/5.9.0/brave-instrumentation-spring-web-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-http/5.9.0/brave-instrumentation-http-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-spring-rabbit/5.9.0/brave-instrumentation-spring-rabbit-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-kafka-clients/5.9.0/brave-instrumentation-kafka-clients-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-kafka-streams/5.9.0/brave-instrumentation-kafka-streams-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-httpclient/5.9.0/brave-instrumentation-httpclient-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-httpasyncclient/5.9.0/brave-instrumentation-httpasyncclient-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-spring-webmvc/5.9.0/brave-instrumentation-spring-webmvc-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-servlet/5.9.0/brave-instrumentation-servlet-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-jms/5.9.0/brave-instrumentation-jms-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/reporter2/zipkin-reporter-metrics-micrometer/2.11.0/zipkin-reporter-metrics-micrometer-2.11.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-context-log4j2/5.11.2/brave-context-log4j2-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-messaging/5.11.2/brave-instrumentation-messaging-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-rpc/5.11.2/brave-instrumentation-rpc-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-spring-web/5.11.2/brave-instrumentation-spring-web-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-http/5.11.2/brave-instrumentation-http-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-spring-rabbit/5.11.2/brave-instrumentation-spring-rabbit-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-kafka-clients/5.11.2/brave-instrumentation-kafka-clients-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-kafka-streams/5.11.2/brave-instrumentation-kafka-streams-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-httpclient/5.11.2/brave-instrumentation-httpclient-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-httpasyncclient/5.11.2/brave-instrumentation-httpasyncclient-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-spring-webmvc/5.11.2/brave-instrumentation-spring-webmvc-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-servlet/5.11.2/brave-instrumentation-servlet-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-jms/5.11.2/brave-instrumentation-jms-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/reporter2/zipkin-reporter-metrics-micrometer/2.12.1/zipkin-reporter-metrics-micrometer-2.12.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/pivotal/spring/cloud/spring-cloud-services-starter-config-client/3.1.2.RELEASE/spring-cloud-services-starter-config-client-3.1.2.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/pivotal/cfenv/java-cfenv-boot-pivotal-scs/2.1.2.RELEASE/java-cfenv-boot-pivotal-scs-2.1.2.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/pivotal/cfenv/java-cfenv-boot/2.1.2.RELEASE/java-cfenv-boot-2.1.2.RELEASE.jar" enabled="true" runInBatchMode="false"/>
@@ -200,7 +197,8 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jolokia/jolokia-core/1.6.2/jolokia-core-1.6.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/mysql/mysql-connector-java/8.0.20/mysql-connector-java-8.0.20.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/micrometer/micrometer-registry-prometheus/1.5.0/micrometer-registry-prometheus-1.5.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/prometheus/simpleclient_common/0.8.1/simpleclient_common-0.8.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/prometheus/simpleclient/0.8.1/simpleclient-0.8.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-mysql/5.11.2/brave-instrumentation-mysql-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave/5.11.2/brave-5.11.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/zipkin2/zipkin/2.19.3/zipkin-2.19.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/reporter2/zipkin-reporter/2.12.1/zipkin-reporter-2.12.1.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>

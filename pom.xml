@@ -53,7 +53,6 @@
 				<scope>import</scope>
 			</dependency>
 
-
 			<dependency>
 				<groupId>com.wavefront</groupId>
 				<artifactId>wavefront-spring-boot-bom</artifactId>

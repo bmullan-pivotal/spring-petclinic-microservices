@@ -160,9 +160,6 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/cloud/spring-cloud-starter-sleuth/2.2.0.RELEASE/spring-cloud-starter-sleuth-2.2.0.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/cloud/spring-cloud-sleuth-core/2.2.0.RELEASE/spring-cloud-sleuth-core-2.2.0.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/aspectj/aspectjrt/1.9.5/aspectjrt-1.9.5.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave/5.9.0/brave-5.9.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/zipkin2/zipkin/2.19.0/zipkin-2.19.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/reporter2/zipkin-reporter/2.11.0/zipkin-reporter-2.11.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-context-log4j2/5.9.0/brave-context-log4j2-5.9.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-messaging/5.9.0/brave-instrumentation-messaging-5.9.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-rpc/5.9.0/brave-instrumentation-rpc-5.9.0.jar" enabled="true" runInBatchMode="false"/>
@@ -200,7 +197,8 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jolokia/jolokia-core/1.6.2/jolokia-core-1.6.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/micrometer/micrometer-registry-prometheus/1.5.0/micrometer-registry-prometheus-1.5.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/prometheus/simpleclient_common/0.8.1/simpleclient_common-0.8.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/prometheus/simpleclient/0.8.1/simpleclient-0.8.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave-instrumentation-mysql/5.9.0/brave-instrumentation-mysql-5.9.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/brave/brave/5.9.0/brave-5.9.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/zipkin2/zipkin/2.19.0/zipkin-2.19.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/zipkin/reporter2/zipkin-reporter/2.11.0/zipkin-reporter-2.11.0.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>
